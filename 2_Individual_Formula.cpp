@@ -140,7 +140,6 @@ int main() {
         }
         cout << "----------------------------------------" << endl;
         cout << "The total result after summing all x values is: " << totalSum << endl;
-
         // Ask the user if they want to run the program again
         cout << "----------------------------------------" << endl;
         cout << "Do you want to run the program again? (y/n): ";
