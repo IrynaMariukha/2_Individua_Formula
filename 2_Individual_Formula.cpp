@@ -92,7 +92,7 @@ int main() {
         while (true) {
             cout << "----------------------------------------" << endl;
             cout << "Enter value for b (b >= a): ";
-            if (cin >> b && b >= a) { // Validating input for b and ensuring b >= a
+            if (cin >> b && b > a) { // Validating input for b and ensuring b >= a
                 break; // Valid input, break out of loop
             } else {
                 cout << "----------------------------------------" << endl;
