@@ -1,7 +1,7 @@
 #include <iostream>
 #include <limits> // for numeric_limits
 using namespace std;
-
+//Hello
 double x_less_than_6(int n, double x) { // x < 6
     double product = 1.0;
     for (int i = 0; i < n; i++) {
@@ -17,7 +17,7 @@ double x_less_than_6(int n, double x) { // x < 6
         }
         product *= sum;
     }
-    cout << "For x = " << x << " (x < 6), the result is: " << product << endl;
+    cout << "For x = " << x << " (x < 6), y = " << product << endl;
     return product;
 }
 
@@ -36,7 +36,7 @@ double x_greater_equals_6(int n, double x) { // x >= 6
         }
         product *= (x - j) / denominator;
     }
-    cout << "For x = " << x << " (x >= 6), the result is: " << sum << endl;
+    cout << "For x = " << x << " (x >= 6), y = " << sum << endl;
 
     return sum - product;
 }
@@ -145,7 +145,5 @@ int main() {
         cout << "Do you want to run the program again? (y/n): ";
         cin >> choice;
         cout << "----------------------------------------" << endl;
-
-        
     } while (choice == 'y' || choice == 'Y'); // Continue if user chooses 'y' or 'Y'
 }
