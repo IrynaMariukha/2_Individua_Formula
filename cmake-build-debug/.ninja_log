@@ -1,7 +1,14 @@
 # ninja log v6
-5	777	7519238645098620	CMakeFiles/2_Individual_Formula.dir/2_Individual_Formula.cpp.obj	38f9bc73536eea25
-781	1029	7519238652861237	2_Individual_Formula.exe	55eca4aceb18671f
-25	967	7532230303418285	CMakeFiles/2_Individual_Formula.dir/2_Individual_Formula.cpp.obj	38f9bc73536eea25
-969	1475	7532230312848200	2_Individual_Formula.exe	55eca4aceb18671f
 11	808	7532231102802818	CMakeFiles/2_Individual_Formula.dir/2_Individual_Formula.cpp.obj	38f9bc73536eea25
 809	990	7532231110772858	2_Individual_Formula.exe	55eca4aceb18671f
+65	208	7550475208118845	CMakeFiles/2_Individual_Formula.dir/Unit_Tests.cpp.obj	cb8b6e7ea799d63d
+55	906	7550475208018759	CMakeFiles/2_Individual_Formula.dir/2_Individual_Formula.cpp.obj	38f9bc73536eea25
+907	1187	7550475216530828	2_Individual_Formula.exe	4a6bac25003c5327
+13	1011	7550491732920667	CMakeFiles/2_Individual_Formula.dir/2_Individual_Formula.cpp.obj	38f9bc73536eea25
+1012	1270	7550491742901532	2_Individual_Formula.exe	4a6bac25003c5327
+9	1067	7550491861319502	CMakeFiles/2_Individual_Formula.dir/2_Individual_Formula.cpp.obj	38f9bc73536eea25
+1069	1218	7550491871916211	2_Individual_Formula.exe	4a6bac25003c5327
+11	721	7550492014138391	CMakeFiles/2_Individual_Formula.dir/2_Individual_Formula.cpp.obj	38f9bc73536eea25
+722	867	7550492021249401	2_Individual_Formula.exe	4a6bac25003c5327
+8	613	7550492153265470	CMakeFiles/2_Individual_Formula.dir/2_Individual_Formula.cpp.obj	38f9bc73536eea25
+614	748	7550492159319419	2_Individual_Formula.exe	4a6bac25003c5327

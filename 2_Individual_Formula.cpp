@@ -4,25 +4,25 @@ using namespace std;
 
 void validateInput () {
     if (cin.fail()) {
-        throw runtime_error("Invalid input");
+        throw ("Invalid input");
     }
 }
 
 void check_n (int n) {
-    if (n < 0) {
-        throw runtime_error("Invalid input. n must be an integer greater than 1");
+    if (n <= 1) {
+        throw ("Invalid input. n must be an integer greater than 1");
     }
 }
 
 void check_b (double a, double b) {
     if (b < a) {
-        throw runtime_error("Invalid input. b must be greater than a");
+        throw ("Invalid input. b must be greater than a");
     }
 }
 
 void check_h (double h, double a, double b) {
     if (h < 0 && h > b - a) {
-        throw runtime_error("Invalid input. Ensure h is non-negative and less than or equal to (b - a)");
+        throw ("Invalid input. Ensure h is non-negative and less than or equal to (b - a)");
     }
 }
 

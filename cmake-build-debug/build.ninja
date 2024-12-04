@@ -55,6 +55,12 @@ build CMakeFiles/2_Individual_Formula.dir/2_Individual_Formula.cpp.obj: CXX_COMP
   OBJECT_DIR = CMakeFiles\2_Individual_Formula.dir
   OBJECT_FILE_DIR = CMakeFiles\2_Individual_Formula.dir
 
+build CMakeFiles/2_Individual_Formula.dir/Unit_Tests.cpp.obj: CXX_COMPILER__2_Individual_Formula_unscanned_Debug C$:/Users/Irina/Documents/GitHub/2_Individua_Formula/Unit$ Tests.cpp || cmake_object_order_depends_target_2_Individual_Formula
+  DEP_FILE = CMakeFiles\2_Individual_Formula.dir\Unit_Tests.cpp.obj.d
+  FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\2_Individual_Formula.dir
+  OBJECT_FILE_DIR = CMakeFiles\2_Individual_Formula.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target 2_Individual_Formula
@@ -63,7 +69,7 @@ build CMakeFiles/2_Individual_Formula.dir/2_Individual_Formula.cpp.obj: CXX_COMP
 #############################################
 # Link the executable 2_Individual_Formula.exe
 
-build 2_Individual_Formula.exe: CXX_EXECUTABLE_LINKER__2_Individual_Formula_Debug CMakeFiles/2_Individual_Formula.dir/2_Individual_Formula.cpp.obj
+build 2_Individual_Formula.exe: CXX_EXECUTABLE_LINKER__2_Individual_Formula_Debug CMakeFiles/2_Individual_Formula.dir/2_Individual_Formula.cpp.obj CMakeFiles/2_Individual_Formula.dir/Unit_Tests.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\2_Individual_Formula.dir
