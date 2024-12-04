@@ -1,7 +1,31 @@
 #include <iostream>
-#include <limits> // for numeric_limits
+#include <limits>
 using namespace std;
-//Hello
+
+void validateInput () {
+    if (cin.fail()) {
+        throw runtime_error("Invalid input");
+    }
+}
+
+void check_n (int n) {
+    if (n < 0) {
+        throw runtime_error("Invalid input. n must be an integer greater than 1");
+    }
+}
+
+void check_b (double a, double b) {
+    if (b < a) {
+        throw runtime_error("Invalid input. b must be greater than a");
+    }
+}
+
+void check_h (double h, double a, double b) {
+    if (h < 0 && h > b - a) {
+        throw runtime_error("Invalid input. Ensure h is non-negative and less than or equal to (b - a)");
+    }
+}
+
 double x_less_than_6(int n, double x) { // x < 6
     double product = 1.0;
     for (int i = 0; i < n; i++) {
@@ -64,54 +88,67 @@ int main() {
         cout << "----------------------------------------" << endl;
         int n;
         double a, b, h;
-        // Loop for valid input of `n`
-        while (true) {
+        // CHECK N
+        try {
             cout << "Enter value for n (integer > 1): ";
-            if (cin >> n && n > 1 && cin.peek() == '\n') {  // Check if input is a valid integer
-                break; // Valid input, break out of loop
-            } else {
-                cout << "----------------------------------------" << endl;
-                cout << "Invalid input. n must be an integer greater than 1. Please try again." << endl;
-                clearInput();
-            }
+            cin >> n;
+            validateInput();
+            check_n(n);
         }
-        // Loop for valid input of `a`
-        while (true) {
-            cout << "----------------------------------------" << endl;
+        catch (const char* exception) {
+            cout << exception << endl;
+            return -1;
+        }
+        catch (...) {
+            cout << "Unknown error" << endl;
+            return -2;
+        }
+
+        // CHECK A
+        try {
             cout << "Enter value for a: ";
-            if (cin >> a) { // Validating input for a
-                break; // Valid input, break out of loop
-            } else {
-                cout << "----------------------------------------" << endl;
-                cout << "Invalid input for a. Please try again." << endl;
-                clearInput();
-            }
+            cin >> a;
+            validateInput();
+        }
+        catch (const char* exception) {
+            cout << exception << endl;
+            return -1;
+        }
+        catch (...) {
+            cout << "Unknown error" << endl;
+            return -2;
         }
 
-        // Loop for valid input of `b`
-        while (true) {
-            cout << "----------------------------------------" << endl;
+        // CHECK B
+        try {
             cout << "Enter value for b (b >= a): ";
-            if (cin >> b && b > a) { // Validating input for b and ensuring b >= a
-                break; // Valid input, break out of loop
-            } else {
-                cout << "----------------------------------------" << endl;
-                cout << "Invalid input for b. Ensure b is greater than or equal to a. Please try again." << endl;
-                clearInput();
-            }
+            cin >> b;
+            validateInput();
+            check_b(a, b);
+        }
+        catch (const char* exception) {
+            cout << exception << endl;
+            return -1;
+        }
+        catch (...) {
+            cout << "Unknown error" << endl;
+            return -2;
         }
 
-        // Loop for valid input of `h`
-        while (true) {
-            cout << "----------------------------------------" << endl;
+        // CHECK H
+        try {
             cout << "Enter value for h (non-negative and less than or equal to b - a): ";
-            if (cin >> h && h >= 0 && h <= (b - a)) {
-                break; // Valid input, break out of loop
-            } else {
-                cout << "----------------------------------------" << endl;
-                cout << "Invalid input. Ensure h is non-negative and less than or equal to (b - a). Please try again." << endl;
-                clearInput();
-            }
+            cin >> h;
+            validateInput();
+            check_h(h, a, b);
+        }
+        catch (const char* exception) {
+            cout << exception << endl;
+            return -1;
+        }
+        catch (...) {
+            cout << "Unknown error" << endl;
+            return -2;
         }
 
         double totalSum = 0.0;
@@ -121,13 +158,15 @@ int main() {
             double result = calculate_x(n, a);
             if (result != -1) {
                 totalSum = result;
-            } else {
+            }
+            else {
                 cout << "----------------------------------------" << endl;
                 cout << "Skipping x = " << a << " due to calculation error." << endl;
             }
-        } else {
+        }
+        else {
             // Loop over the range of x, from a to b with step size h
-            for (double x = a; x <= b; x += h) {
+            for (double x = a; x <= b; x += h) {                                                    // NOLINT(*-flp30-c)
                 double result = calculate_x(n, x);
                 // If an error occurred (result == -1), skip this x value
                 if (result == -1) {
